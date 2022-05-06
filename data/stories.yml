@@ -1,0 +1,323 @@
+version: "2.0"
+
+stories:
+
+- story: salut_heureux1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_introduction
+
+- story: salut_heureux2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: user_cv
+  - action: utter_mood
+  - action: utter_introduction
+
+- story: salut_heureux3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: user_cv
+  - action: utter_mood
+  - action: utter_introduction
+
+- story: salut_malheureux1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_introduction
+
+- story: salut_malheureux2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_resp_mood_bad
+  - action: utter_introduction
+
+- story: comment tu t'appelles ?
+  steps:
+    - intent : ask_name
+    - action : utter_give_name
+    - action: utter_introduction
+
+- story: challenge
+  steps:
+    - intent : bot_challenge
+    - action : utter_iamabot
+    - action: utter_introduction
+
+
+
+- story: remerciement
+  steps:
+  - intent: user_merci
+  - action: utter_merci_rep
+
+
+
+- story: debut_conversation
+  steps:
+    - intent: intro
+    - action: utter_introduction
+
+
+
+
+- story: symptomsc
+  steps:
+    - intent : symptoms
+    - action : utter_symptom
+
+- story: flu
+  steps:
+    - intent: flu_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_flu_response
+    - intent: affirm
+    - action: utter_happy
+
+- story: dry vision
+  steps:
+    - intent: vision_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_vision_types
+    - intent: affirm
+    - action: utter_dry_eyes_response
+    - intent: affirm
+    - action: utter_happy
+
+- story: allergy vision
+  steps:
+    - intent: vision_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_vision_types
+    - intent: deny
+    - action: utter_allergy_eyes_response
+    - intent: affirm
+    - action: utter_happy
+
+- story: gas stomach
+  steps:
+    - intent: stomach_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_stomach_types
+    - intent: affirm
+    - action: utter_gas_response
+    - intent: affirm
+    - action: utter_happy
+
+- story: poison stomach
+  steps:
+    - intent: stomach_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_stomach_types
+    - intent: deny
+    - action: utter_poison_response
+    - intent: affirm
+    - action: utter_happy
+
+- story: head main
+  steps:
+    - intent: head_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_head_stomach_symptom
+
+- story: head stomach ache
+  steps:
+    - action: utter_head_stomach_symptom
+    - intent: affirm
+    - action: utter_head_stomach_response
+    - intent: affirm
+    - action: utter_happy
+
+
+- story: headache area
+  steps:
+    - action: utter_head_stomach_symptom
+    - intent: deny
+    - action: utter_head_symptom
+
+- story: headache whole
+  steps:
+    - intent: head_whole
+    - action: utter_head_whole_response
+    - intent: affirm
+    - action: utter_happy
+
+- story: headache side
+  steps:
+    - intent: head_sides
+    - action: utter_head_sides_response
+    - intent: affirm
+    - action: utter_happy
+
+- story: headache crown
+  steps:
+    - intent: head_crown
+    - action: utter_head_crown_response
+    - intent: affirm
+    - action: utter_happy
+
+- story: headache eyes
+  steps:
+    - intent: head_eyes
+    - action: utter_head_eyes_response
+    - intent: affirm
+    - action: utter_happy
+
+- story: out of scope stop
+  steps:
+    - intent: out_of_scope
+    - action: utter_desole
+    - intent: deny
+    - action: utter_goodbye
+
+- story: conseil
+  steps:
+    - intent: conseil
+    - action: utter_conseil
+- story: stresse
+  steps:
+    - intent: stresse
+    - action: utter_stresse
+    - intent: affirm
+    - action: utter_happy
+- story: regime
+  steps:
+    - intent: regime
+    - action: utter_regime
+    - intent: affirm
+    - action: utter_happy
+- story: exercice
+  steps:
+    - intent: exercice
+    - action: utter_exercice
+    - intent: affirm
+    - action: utter_happy
+
+- story: info
+  steps:
+    - intent: info
+    - action: utter_info
+
+- story: DISEASE INFO HEART
+  steps:
+  - intent: Heart_Disease
+  - action: utter_heart_disease
+  - action: utter_heart_disease_symp
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO CORONA
+  steps:
+  - intent: Corona_Virus_Disease
+  - action: utter_corona_virus_disease
+  - action: utter_corona_virus_disease_symptoms
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO MALARIA
+  steps:
+  - intent: Malaria
+  - action: utter_malaria
+  - action: utter_malaria_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO CANCER
+  steps:
+  - intent: Cancer
+  - action: utter_cancer
+  - action: utter_cancer_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO TUBERCULOSIS
+  steps:
+  - intent: Tuberculosis
+  - action: utter_tuberculosis
+  - action: utter_tuberculosis_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO CHIKUNGUNYA
+  steps:
+  - intent: Chikungunya
+  - action: utter_chikungunya
+  - action: utter_chikungunya_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO TYPHOID
+  steps:
+  - intent: Typhoid
+  - action: utter_typhoid
+  - action: utter_typhoid_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO DIABETES
+  steps:
+  - intent: Diabetes
+  - action: utter_diabetes
+  - action: utter_diabetes_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO ASTHMA
+  steps:
+  - intent: Asthma
+  - action: utter_asthma
+  - action: utter_asthma_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+
+- story: out of scope continue
+  steps:
+    - intent: out_of_scope
+    - action: utter_desole
+    - intent: affirm
+    - action: utter_greet
+
+- story: medis
+  steps:
+    - intent: medi
+    - action: utter_medi
+- story: doli
+  steps:
+    - intent: doli
+    - action: utter_doli
+- story: rino
+  steps:
+    - intent: rino
+    - action: utter_rino

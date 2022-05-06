@@ -1,0 +1,325 @@
+//rasa version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_name
+  - user_merci
+  - user_cv
+  - intro
+  - symptoms
+  - flu_symptom
+  - day
+  - vision_symptom
+  - stomach_symptom
+  - head_symptom
+  - head_whole
+  - head_sides
+  - head_crown
+  - head_eyes
+  - out_of_scope
+  - conseil
+  - info
+  - exercice
+  - regime
+  - stresse
+  - Heart_Disease
+  - Corona_Virus_Disease
+  - Malaria
+  - Cancer
+  - Tuberculosis
+  - Chikungunya
+  - Typhoid
+  - Diabetes
+  - Asthma
+  - medi
+  - doli
+  - rino
+
+responses:
+  utter_greet:
+  - text: "salut! comment allez-vous?"
+
+  utter_symptom:
+    - text: "Êtes-vous confronté à l'un de ces problèmes:  Migraine | Estomac | Grippe | Vision"
+      buttons:
+        - title: "Migraine"
+          payload: "douleur à la tête"
+        - title: "Estomac"
+          payload: "mal au ventre"
+        - title: "Grippe"
+          payload: "fievre"
+        - title: "Vision"
+          payload: "regard"
+
+  utter_give_name:
+    - text: "je m'appelle ASSAD !"
+
+
+  utter_cheer_up:
+  - text: "voilà quelque chose pour vous réconforter:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "ça vous a aidé?"
+
+  utter_happy:
+  - text: "agréable, heureux d'entendre!"
+
+  utter_goodbye:
+  - text: "Au revoir! merci pour votre visite"
+
+  utter_iamabot:
+  - text: "je suis un bot développé par ABBASSI-HLAILI-ZNIBI et l'encadrement de Mr.ASSAD"
+
+
+
+  utter_choix:
+    - text: "qu'est ce que vous désirez ?"
+
+  utter_merci:
+    - text: "merci beaucoup!"
+
+  utter_merci_rep:
+    - text: "je vous en prie !"
+
+  utter_mood:
+    - text: "je vais très bien, merci!"
+
+  utter_resp_mood_bad:
+    - text: "triste d'entendre! détends-toi ça va passer !"
+
+  utter_desole:
+    - text: "pardon! pouvez-vous reformuler votre question?"
+
+
+
+
+  utter_introduction:
+      - text: "Puisque je suis votre assisstant virtuel \n comment je peux vous aider ?"
+        buttons:
+          - title: "des symptomes"
+            payload: "besoin d'une consultation sur des symptomes"
+          - title: "des conseils"
+            payload: "besoin des conseils sanitaire"
+          - title: "informations"
+            payload: "informations sur des maladies"
+          - title: "medicaments"
+            payload: "informations sur des medicaments"
+
+
+  utter_daccord:
+     - text : "agréable! heureux de vous aider"
+
+
+  utter_introduction_cont:
+    - text : "comment puis-je vous aider plus?"
+      buttons:
+        - title: "des symptomes"
+          payload: "besoin d'une consultation sur des symptomes"
+        - title: "des conseils"
+          payload: "besoin des conseils sanitaire"
+        - title: "informations"
+          payload: "informations sur des maladies"
+        - title: "medicaments"
+          payload: "informations sur des medicaments"
+
+  utter_hors_sujet:
+    - text: "Pardon ! pouvez-vous reformulez votre question ?"
+
+  utter_day:
+    - text: "Depuis quand souffres-tu ? moins de 24 heures | plus de 24 heures"
+  utter_flu_response:
+    - text: "Cela est souvent causé par une forte fièvre, des maux de tête, des douleurs musculaires, une toux, un nez qui coule ou une sensation de vomissement.\n\ Voici quelques remèdes :\n\ 1. Reposez-vous beaucoup 2. Restez hydraté 3. Gargarisez-vous avec du sel de l'eau pour le mal de gorge 4. Lavez-vous souvent les mains avec de l'eau et du savon
+    \n ça vous a aidé?"
+
+  utter_vision_types:
+    - text: "1. Avez-vous utilisé des lentilles de contact pendant une longue période ?\n\ 2. Manquez-vous de sommeil ?\n\ 3. Souffrez-vous d'arthrite, de diabète ou de grossesse ? Oui | Non"
+  utter_dry_eyes_response:
+    - text: "Vous présentez des symptômes de sécheresse oculaire.\n\ Il s'agit d'une affection courante qui survient lorsque vos larmes ne sont pas en mesure de fournir une lubrification adéquate à vos yeux.\n\ Voici quelques remèdes :\n\ 1. Larmes artificielles ou autres gouttes oculaires lubrifiantes, 2. Appliquez des compresses chaudes 3. Reposez vos yeux 4. Dormez plus
+    \n ça vous a aidé?"
+  utter_allergy_eyes_response:
+    - text: "Vous présentez des symptômes d'allergies oculaires.\n\ Ils surviennent lorsque les yeux réagissent à des allergènes tels que la poussière, l'exposition au soleil, des bactéries ou des virus, du pollen, de la fumée ou des lentilles de contact qui les irritent.\n\ Voici quelques exemples remèdes pour le même :\n\ 1. Lavez-vous les yeux 2. Appliquez des compresses froides 3. Restez à l'intérieur 4. Appliquez des gouttes pour les yeux allergiques
+    \n ça vous a aidé?"
+
+  utter_stomach_types:
+    - text: "Êtes-vous confronté à l'un des problèmes suivants : ballonnements, constipation, gaz ? Oui | Non"
+  utter_gas_response:
+    - text: "Voici quelques remèdes pour le même :\n\ Ballonnements - 1. Mangez à intervalles réguliers, 2. Remplacez les sodas par de l'eau 3. Réduisez le sel.\n\ Constipation - 1. Buvez plus d'eau, 2. Augmenter la consommation de fibres solubles comme le son d'avoine, l'orge, les noix, les graines ainsi que certains fruits et légumes . 3.Trouvez des moyens d'intégrer l'exercice à votre routine, comme faire une promenade après un repas.
+    \n ça vous a aidé?"
+  utter_poison_response:
+    - text: "Voici les remèdes pour d'autres causes de maux d'estomac :\n\ douleurs abdominales basses - 1. Utilisez un sac chauffant, 2. Réduisez votre consommation de café, de thé et d'alcool car ils peuvent aggraver la douleur. 3. Reposez-vous suffisamment.\n\ Vomissements : 1.Mangez des aliments légers et fades. 2.Évitez les aliments frits, gras ou sucrés. 3.Mangez lentement et mangez des repas plus petits et plus fréquents.\n\ Mouvements lâches : 1. Buvez du jus de gingembre, 2. Buvez du citron et de l'eau salée 3. Mangez de la grenade
+    \n "
+
+  utter_head_stomach_symptom:
+    - text: "Êtes-vous confronté à des problèmes d'estomac comme le reflux acide ? Oui | Non"
+  utter_head_stomach_response:
+    - text: "1. Buvez du babeurre 2. Buvez de l'eau tiède avec du citron 3. Consommez du vinaigre de cidre de pomme
+    \n ça vous a aidé?"
+  utter_head_symptom:
+    - text: "Quelle zone de la tête fait-elle le plus mal? Ensemble | Côtés | Couronne | Autour de l'œil"
+  utter_head_whole_response:
+    - text: "Cela indique souvent du stress, un changement de routine quotidienne ou de l'acidité.\n\ Voici quelques remèdes pour le même :\n\ Stress - 1. Méditez et faites des exercices de respiration 2. Apaisez la douleur avec des compresses froides 3. Prenez des vapeurs\ n\ Changement quotidien de routine - 1. Dormez suffisamment 2. Évitez l'exposition directe au soleil 3. Restez hydraté\n\ Acidité - 1. Évitez les aliments acides 2. Augmentez l'apport en fibres 3. Prenez des repas réguliers
+    \n ça vous a aidé?"
+  utter_head_sides_response:
+    - text: "Cela indique souvent une migraine ou un sinus.\n\ Voici quelques remèdes pour la même chose:\n\ Migraine - 1. Utilisez des huiles essentielles, 2. Essayez l'acupression, 3. Évitez les aliments transformés, les aliments marinés ou les boissons gazeuses. \n\ Sinus - 1. Prenez de la vapeur, 2. Utilisez de l'huile d'eucalyptus, 3. Prenez de la vitamine C
+    \n ça vous a aidé?"
+  utter_head_crown_response:
+    - text: "Cela indique souvent un manque de sommeil, un gel du cerveau ou de la tension.\n\ Voici quelques remèdes pour le même :\n\ Manque de sommeil - 1. Dormez suffisamment, 2. Évitez d'utiliser un appareil électronique avant de dormir.\ n\ Brain Freeze - 1. Soyez dans des environnements chauds, 2. Couvrez-vous la tête avant de sortir.\n\ Tension - 1. Détendez-vous avec le yoga, 2. Buvez de l'eau, 3. Éteignez les lumières
+    \n ça vous a aidé?"
+  utter_head_eyes_response:
+    - text: "Cela indique souvent un changement du nombre d'yeux ou du stress.\n\ Voici quelques remèdes pour le même :\n\ Changement du nombre d'yeux - 1. Vérifiez à nouveau votre numéro, 2. Limitez le temps d'écran, 3. Prenez pauses toutes les 30 minutes.\n\ Stress : 1. Sirotez du thé au gingembre, 2. Faites-vous masser, 3. Appliquez une compresse froide.
+    \n ça vous a aidé?"
+
+  utter_conseil:
+    - text: "tu veux que je te conseille en quoi exactement?"
+      buttons:
+        - title: "stresse"
+          payload: "gerer le stresse"
+        - title: "execrice"
+          payload: "exercer"
+        - title: "regime"
+          payload: "aliments"
+  utter_info:
+    - text: "tu veux des informations quoi exactement?"
+      buttons:
+        - title: "cardiopathie"
+          payload: "Maladie du cœur"
+        - title: "corona"
+          payload: "coronavirus"
+        - title: "paludisme"
+          payload: "malaria"
+        - title: "cancer"
+          payload: "cancer"
+        - title: "tuberculose"
+          payload: "phtisie"
+        - title: "chikungunya"
+          payload: "chikungunya"
+        - title: "typhoïde"
+          payload: "typhus"
+        - title: "Diabète"
+          payload: "diabetes"
+        - title: "asthme"
+          payload: "asthma"
+
+
+  utter_stresse:
+    - text: "D'accord, pas de problème. Veuillez suivre régulièrement les points ci-dessous :)) \n
+            1. Gardez une attitude positive.\n
+            2. Acceptez qu'il existe des événements que vous ne pouvez pas contrôler.\n
+            3. Soyez assertif au lieu d'être agressif. Affirmez vos sentiments, vos opinions ou vos croyances au lieu de vous mettre en colère, sur la défensive ou de rester passif.\n
+            4. Apprendre et pratiquer des techniques de relaxation ; essayez la méditation, le yoga ou le tai-chi.\n
+            5. Faites de l'exercice régulièrement. Votre corps peut mieux lutter contre le stress lorsqu'il est en forme.\n
+            6. Mangez des repas sains et équilibrés.\n
+            7. Apprenez à gérer votre temps plus efficacement.\n
+            8. Fixez des limites appropriées et dites non aux demandes qui créeraient un stress excessif dans votre vie.\n
+            9. Consacrez du temps aux loisirs et aux centres d'intérêt.\n
+            10. Reposez-vous et dormez suffisamment. Votre corps a besoin de temps pour se remettre d'événements stressants.\n
+            11. Ne comptez pas sur l'alcool, les drogues ou les comportements compulsifs pour réduire le stress. Les drogues et l'alcool peuvent stresser encore plus votre corps.
+            Rechercher un soutien social. Passez suffisamment de temps avec ceux que vous aimez.
+            \n ça vous a aidé?"
+    - text: "C'est normal de se sentir dépassé parfois. Essayez de définir des attentes réalistes
+                    et exercer des techniques de gestion du temps, comme diviser de grandes tâches en plus
+                    pièces gérables. Les techniques de relaxation, la respiration profonde et la méditation peuvent
+                    être également bénéfique.
+                    \n ça vous a aidé?"
+  utter_exercice:
+    - text: "La plupart des adultes en bonne santé devraient viser environ 150 minutes d'exercice modéré
+                    par semaine. Cela inclut des activités comme le jogging ou les sports de plein air.
+                    \n ça vous a aidé?"
+    - text: "Presque toute forme d'exercice ou de mouvement peut augmenter votre niveau de forme physique tout en diminuant votre stress. Le plus important est de choisir une activité que vous aimez. Les exemples incluent la marche, la montée d'escaliers, le jogging, la danse, le vélo, le yoga, le tai-chi, le jardinage. , l'haltérophilie et la natation. Faites-le pendant une heure par jour
+    \n ça vous a aidé?"
+  utter_regime:
+    - text: "Une alimentation saine comprend des fruits et légumes, des grains entiers, des produits laitiers, des protéines maigres,
+                    et les graisses. Visez la variété des aliments et l'équilibre
+                    \n ça vous a aidé?"
+    - text: "Un régime alimentaire sain : met l'accent sur les légumes, les fruits, les grains entiers et les produits laitiers sans gras ou faibles en gras. Comprend les viandes maigres, la volaille, le poisson, les haricots, les œufs et les noix. Limite les gras saturés et trans, le sodium et les graisses ajoutées. sucres.
+    \n ça vous a aidé?"
+
+
+  utter_heart_disease:
+    - text: "Les maladies cardiovasculaires (MCV) sont la principale cause de décès dans le monde. Les crises cardiaques et les accidents vasculaires cérébraux sont généralement des événements aigus et sont principalement causés par un blocage qui empêche le sang de circuler vers le cœur ou le cerveau. La raison la plus courante en est une accumulation de dépôts graisseux sur les parois internes des vaisseaux sanguins qui alimentent le cœur ou le cerveau. Les accidents vasculaires cérébraux peuvent être causés par un saignement d'un vaisseau sanguin dans le cerveau ou par des caillots sanguins."
+  utter_corona_virus_disease:
+    - text: "La maladie à coronavirus (COVID-19) est une maladie infectieuse causée par un coronavirus nouvellement découvert. La meilleure façon de prévenir et de ralentir la transmission est d'être bien informé sur le virus COVID-19, la maladie qu'il provoque et la façon dont il se propage . Protégez-vous et protégez les autres contre l'infection en vous lavant les mains ou en utilisant fréquemment un désinfectant à base d'alcool et en ne touchant pas votre visage."
+  utter_malaria:
+    - text: "Le paludisme est une maladie potentiellement mortelle causée par des parasites qui sont transmis aux humains par les piqûres de moustiques anophèles femelles infectés. Il est évitable et guérissable. Il existe 5 espèces de parasites qui causent le paludisme chez l'homme, et 2 de ces espèces - Plasmodium falciparum et Plasmodium vivax - constituent la plus grande menace."
+  utter_cancer:
+    - text: "Le cancer est un terme générique pour un grand groupe de maladies qui peuvent affecter n'importe quelle partie du corps. Les autres termes utilisés sont les tumeurs malignes et les néoplasmes. Une caractéristique déterminante du cancer est la création rapide de cellules anormales qui se développent au-delà de leurs limites habituelles et qui peuvent ensuite envahir les parties adjacentes du corps et se propager à d'autres organes ; ce dernier processus est appelé métastase. Les métastases sont la première cause de décès par cancer."
+  utter_tuberculosis:
+    - text: "La tuberculose est causée par une bactérie (Mycobacterium tuberculosis) et elle affecte le plus souvent les poumons. La tuberculose se transmet par voie aérienne lorsque les personnes atteintes de tuberculose pulmonaire toussent, éternuent ou crachent. Une personne n'a besoin d'inhaler que quelques germes pour être infectée."
+  utter_chikungunya:
+    - text: "Le chikungunya est une maladie virale transmise par les moustiques qui provoque de la fièvre et des douleurs articulaires intenses. La maladie a été identifiée pour la première fois en 1952 lors d'une épidémie dans le sud de la Tanzanie. C'est un virus à acide ribonucléique (ARN) qui appartient au genre alphavirus de la famille des Togaviridae. Le nom 'chikungunya' dérive d'un mot de la langue Kimakonde du sud de la Tanzanie, signifiant 'se contorsionner', et décrit l'apparence voûtée des personnes souffrant de douleurs articulaires (arthralgie)."
+  utter_typhoid:
+    - text: "La fièvre typhoïde est une infection systémique potentiellement mortelle causée par la bactérie Salmonella enterica sérovar Typhi (communément appelée Salmonella Typhi). La typhoïde se transmet généralement par l'ingestion d'aliments ou d'eau contaminés."
+  utter_diabetes:
+    - text: "Le diabète est une maladie métabolique chronique caractérisée par des niveaux élevés de glucose dans le sang (ou sucre dans le sang), qui entraînent au fil du temps de graves dommages au cœur, aux vaisseaux sanguins, aux yeux, aux reins et aux nerfs. Le plus courant est le diabète de type 2, généralement chez les adultes, qui survient lorsque le corps devient résistant à l'insuline ou ne produit pas suffisamment d'insuline."
+  utter_asthma:
+    - text: "L'asthme est une affection de longue durée qui touche les enfants et les adultes. Les passages d'air dans les poumons se rétrécissent en raison de l'inflammation et du resserrement des muscles autour des petites voies respiratoires."
+  utter_heart_disease_symp:
+    - text: "Souvent, il n'y a aucun symptôme de la maladie sous-jacente des vaisseaux sanguins. Une crise cardiaque ou un accident vasculaire cérébral peut être le premier signe d'une maladie sous-jacente. Les symptômes d'une crise cardiaque comprennent\n1) une douleur ou une gêne au centre de la poitrine ;\n2) douleur ou inconfort dans les bras, l'épaule gauche, les coudes, la mâchoire ou le dos. »
+    \n ça vous a aidé?"
+  utter_corona_virus_disease_symptoms:
+    - text: "1) La plupart des personnes infectées par le virus COVID-19 souffriront d'une maladie respiratoire légère à modérée et se rétabliront sans nécessiter de traitement particulier.\n2) Les personnes âgées et celles qui ont des problèmes médicaux sous-jacents comme les maladies cardiovasculaires, le diabète, les maladies respiratoires chroniques , et le cancer sont plus susceptibles de développer une maladie grave.
+    \n ça vous a aidé?"
+  utter_malaria_symptoms:
+    - text: "Les symptômes du paludisme sont les suivants.....\n1)Les premiers symptômes (fièvre, maux de tête et frissons) peuvent être légers et difficiles à reconnaître comme étant le paludisme.\n2)Si non traité dans les 24 heures , le paludisme à Plasmodium falciparum peut évoluer vers une maladie grave et entraîner la mort.
+    \n ça vous a aidé?"
+  utter_cancer_symptoms:
+    - text: "Les symptômes de la maladie cancéreuse sont les suivants...\n1) Fatigue\n2) Grosseur ou zone d'épaississement pouvant être ressentie sous la peau\n3) Changements de poids, y compris perte ou gain involontaire\n4) Modifications de la peau, telles que jaunissement, assombrissement ou rougeur de la peau, plaies qui ne guérissent pas ou modifications des grains de beauté existants\n5) Modifications des habitudes intestinales ou de la vessie\n6) Toux persistante ou difficulté à respirer.
+    \n ça vous a aidé?"
+  utter_tuberculosis_symptoms:
+    - text: "Les symptômes de la tuberculose sont les suivants...\n1) Toux prolongée\n2) Douleur thoracique\n3) Faiblesse ou fatigue\n4) Perte de poids\n5) Fièvre\n6) Sueurs nocturnes
+    \n ça vous a aidé?"
+  utter_chikungunya_symptoms:
+    - text: "Les symptômes de la maladie de Chikungunya sont les suivants.....\n1) Douleurs musculaires\n2) Maux de tête\n3) Nausées\n4) Fatigue et éruption cutanée
+    \n ça vous a aidé?"
+  utter_typhoid_symptoms:
+      - text: "Les symptômes de la maladie typhoïde sont les suivants...\n1)Fièvre élevée prolongée\n2) Fatigue, maux de tête, nausées\n3) Douleurs abdominales\n4) Constipation ou diarrhée\n5) Éruption cutanée dans certains cas
+      \n ça vous a aidé?"
+  utter_diabetes_symptoms:
+    - text: "Tout type de diabète peut entraîner des complications dans de nombreuses parties du corps et peut augmenter le risque global de décès prématuré.\n1)Les complications possibles incluent l'insuffisance rénale, l'amputation des jambes, la perte de vision et les lésions nerveuses.\n2)Adultes diabétiques ont également deux à trois fois plus de risques de crises cardiaques et d'accidents vasculaires cérébraux.\n3) Pendant la grossesse, un diabète mal contrôlé augmente le risque de mort fœtale et d'autres complications. »
+    \n ça vous a aidé?"
+  utter_asthma_symptoms:
+    - text: "Les symptômes courants de l'asthme peuvent être:\n1)Toux\n2)Sifflements\n3)Essoufflement et oppression thoracique.
+    \n ça vous a aidé?"
+
+  utter_medi:
+    - text: "donnez-moi un nom pour chercher les prix"
+
+  utter_doli:
+    - text: "DOLIPRANE 1 G, Comprimé effervescent sécable\n
+             Boîte de 8 - PPV: 14.60 dhs\n
+             DOLOSTOP 1000 MG, Comprimé effervescent\n
+             Boite de 8 - PPV: 12.80 dhs\n
+             ANDOL 1000 MG, Comprimé effervescent\n
+             Boîte de 8 - PPV: 14.50 dhs\n
+             CETAMYL 1000 MG, Comprimé effervescent\n
+             Boite de 8 - PPV: 14.80 dhs\n
+             PARANTAL 1 G, Comprimé effervescent\n
+             Boîte de 8 - PPV: 14.60 dhs
+             \nIndication(s)\n
+             Le paracétamol dosé à 500 mg et 1 g comprimés sont indiqués dans le Traitement des douleurs d'intensité faible à modérée (maux de tête, maux de dents, douleurs articulaires et ligamentaires, douleurs dorsales, douleurs pendant la menstruation, douleurs après blessures, douleurs lors de refroidissements).
+             Traitement symptomatique de la fièvre.\n
+             Le paracétamol dosé à 1 g comprimés est aussi indiqué dans le traitement symptomatique des douleurs arthrosiques."
+
+  utter_rino:
+    - text: "RINOMICINE, Sachet\n
+             Boîte de 10 - PPV: 22.70 dhs\n
+             Indication(s)\n
+             Traitement au cours des rhumes de l'adulte et de l’adolescent de plus de 15 ans :\n
+
+             · des sensations de nez bouché,\n
+
+             · de l'écoulement nasal clair,\n
+
+             · des maux de tête et/ou fièvre.\n
+             Age minimal d'utilisation :15 ans"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

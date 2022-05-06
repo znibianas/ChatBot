@@ -1,0 +1,372 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - salut
+    - start
+    - coucou
+    - cc
+    - bonjour
+    - bonsoir
+    - wesh
+    - hi
+    - salam
+    - eho
+    - allo
+    - slt
+    - s'il te plait
+    - s'il vous plait
+    -slm
+
+
+
+- intent : ask_name
+  examples: |
+    - comment tu t'appelles?
+    - ton nom ?
+    - votre nom ?
+    - tu t'appelles
+    - c'est qui ?
+
+- intent: goodbye
+  examples: |
+    - à bientot
+    - au revoir
+    - bye
+    - à tout à l'heure
+    - bonne nuit
+    - à plus
+    - goodbye
+    - bye bye
+    - à demain
+
+
+- intent: affirm
+  examples: |
+    - oui
+    - ouais
+    - yep
+    - bien sur
+    - d'accord
+    - vrai
+    - ui
+    - v
+    - ah
+
+- intent: deny
+  examples: |
+    - no
+    - non
+    - jamais
+    - je ne pense pas
+    - je ne suis pas d'accord
+    - pas vrai
+    - nn
+    - la
+    - nope
+
+
+- intent: mood_great
+  examples: |
+    - parfait
+    - bien
+    - je vais très bien
+    - ça marche
+    - agréable
+    - très bon
+
+
+- intent: mood_unhappy
+  examples: |
+    - terrible
+    - pas bien
+    - je me sens pas bien
+    - triste
+
+- intent: bot_challenge
+  examples: |
+    - tu es un bot?
+    - tu es humain?
+    - parle-je à un bot?
+    - parle-je à un homme?
+
+- intent : user_sorry
+  examples: |
+    - pardon
+    - je m'excuse
+    - désolé
+
+
+- intent : symptoms
+  examples: |
+    - besoin d'une consultation sur des symptomes
+    - j'ai des symptomes
+    - symptoms
+    - les symptomes
+    - symptomes
+    - des symptomes
+
+
+
+- intent : user_merci
+  examples: |
+    - merci
+    - merci beaucoup
+    - merci bcp
+    - ok merci
+    - d'accord merci
+    - mrc
+
+
+- intent : user_cv
+  examples: |
+    - comment allez-vous ?
+    - cv ?
+    - ca va?
+    - ça va ?
+    - ça marche ?
+    - tu vas bien ?
+    - vous allez bien ?
+    - comment vas-tu ?
+    - et toi ?
+    - cv et toi ?
+    - je vais trés bien et toi ?
+    - je vais trés bien et vous ?
+    - et vous ?
+    - parfait et toi ?
+    - parfait et vous ?
+    - bien et toi ?
+    - bien et vous ?
+    - trés bon et toi ?
+
+
+
+- intent : intro
+  examples: |
+    - commence
+
+
+- intent: day
+  examples: |
+    - moins que 24 heures
+    - plus que 24 heures
+    - moins
+    - plus
+    - m
+    - p
+
+- intent: flu_symptom
+  examples: |
+    - grippe
+    - toux
+    - froid
+    - fievre
+    - g
+    - nez
+    - nez qui coule
+    - vomit
+    - courbatures
+
+- intent: vision_symptom
+  examples: |
+    - vision
+    - v
+    - regard
+    - yeux
+
+- intent: stomach_symptom
+  examples: |
+    - Estomac
+    - mal au ventre
+    - stomach ache
+    - stomach
+
+- intent: head_symptom
+  examples: |
+    - migraine
+    - mal a tete
+    - tette
+    - tete
+    - t
+    - douleur à la tête
+- intent: head_whole
+  examples: |
+    - tout
+    - t
+    - toute
+    - tous
+- intent: head_sides
+  examples: |
+    - cotes
+    - cote
+    - c
+- intent: head_crown
+  examples: |
+    - couronne
+    - couronnes
+    - c
+- intent: head_eyes
+  examples: |
+    - yeux
+    - oueil
+    - o
+
+- intent : conseil
+  examples: |
+    - besoin des conseils sanitaire
+    - conseil
+    - conseils
+- intent : info
+  examples: |
+    - informations sur des maladies
+    - info
+    - informations
+    - maladies
+
+- intent : stresse
+  examples: |
+    - gerer le stresse
+    - stresse
+    - stresser
+    - stres
+- intent : exercice
+  examples: |
+    - exercices
+    - exercer
+    - exercice
+- intent : regime
+  examples: |
+    - regime
+    - régime
+    - un régime
+    - aliment
+    - aliments
+
+- intent: Heart_Disease
+  examples: |
+    - plus d'informations sur les maladies cardiaques
+    - quelque chose de plus sur le cœur
+    - besoin d'informations sur les maladies cardiovasculaires
+    - donner des informations sur les maladies entendues
+    - Qu'est-ce qu'une maladie cardiaque exactement ?
+    - une maladie cardiaque élaborée pour moi
+    - Pourquoi un arrêt cardiaque se produit-il ?
+    - Maladie du cœur
+    - cardiopathie
+- intent: Corona_Virus_Disease
+  examples: |
+    - maladie du coronavirus
+    - Nouvelles informations sur le virus corona
+    - COVID
+    - qu'est-ce que le virus corona
+    - voulez en savoir plus sur la maladie corona
+    - donner des informations sur corona
+    - qu'est-ce que le covid-19 ?
+    - pourquoi le corona est-il dangereux?
+    - corona
+    - coronavirus
+- intent: Malaria
+  examples: |
+    - qu'est-ce que le paludisme
+    - Informations sur la maladie du paludisme
+    - des informations sur la maladie du paludisme
+    - dis m'en plus sur le paludisme
+    - afficher des informations sur le paludisme
+    - besoin de savoir sur le paludisme
+    - malaria
+    - paludisme
+- intent: Cancer
+  examples: |
+    - cancer info
+    - infos sur le cancer
+    - informations sur la maladie du cancer
+    - donner des informations sur le cancer
+    - je veux en savoir plus sur le cancer
+    - parlez-moi de la maladie du cancer
+    - cancer
+- intent: Tuberculosis
+  examples: |
+    - des informations sur la maladie tuberculeuse
+    - Qu'est-ce que la tuberculose ?
+    - dis-m'en plus sur la tuberculose
+    - fournir des informations sur la tuberculose
+    - je veux en savoir plus sur la tuberculose
+    - TB
+    - Qu'est-ce que la tuberculose ?
+    - phtisie
+- intent: Chikungunya
+  examples: |
+    - informations sur la maladie du chikungunya
+    - donner des informations sur la maladie de Chikungunya
+    - fournir des informations sur le chikungunya
+    - je veux en savoir plus sur le chikungunya
+    - qu'est-ce que la maladie du chikungunya
+    - chikungunya
+- intent: Typhoid
+  examples: |
+    - informations sur la typhoïde
+    - dis-moi quelque chose sur la maladie typhoïde
+    - fournir des informations sur la typhoïde
+    - je veux en savoir plus sur la typhoïde
+    - quelque chose de plus sur la maladie typhoïde
+    - typhus
+- intent: Asthma
+  examples: |
+    - asthme
+    - Asthme
+    - comment l'asthme est-il causé
+    - dis-moi quelque chose sur l'asthme
+    - me montrer des informations sur l'asthme
+    - l'asthme est-il un sujet de préoccupation
+    - asthma
+- intent: Diabetes
+  examples: |
+    - Diabète
+    - Diabète
+    - fournir des informations sur le diabète
+    - pouvez-vous me dire quelque chose sur le diabète
+    - savez-vous quelque chose sur le diabète
+    - diabetes
+
+- intent: out_of_scope
+  examples: |
+    - ce n'est pas ce que je veux faire
+    - à l'arrêt
+    - tu n'es d'aucune aide
+    - cela ne sert à rien
+    - quel âge as-tu
+    - Je veux commander une pizza
+    - dis-moi la météo
+    - cela ne fonctionne pas
+    - Je te l'ai déjà dit
+    - n'aime pas ça
+    - Je ne veux pas te dire ça
+    - ça ne vous concerne pas
+    - Ce n'est pas juste
+    - arrête de demander
+    - ça ne fait rien
+    - je veux faire autre chose
+    - J'ai changé d'avis
+    - asdjaksjdhaksd
+    - hgfikgbrkjsdbfkjs
+
+- intent: medi
+  examples: |
+    - informations sur des medicaments
+    - des medicaments
+    - medicaments
+- intent: doli
+  examples: |
+    - doliprane
+    - paracetamol
+    - dolostop
+    - parantal
+    - cetamyl
+    - andol
+- intent: rino
+  examples: |
+    - rino
+    - rinomicine
+    - rinomicin
+    - rinomicil
